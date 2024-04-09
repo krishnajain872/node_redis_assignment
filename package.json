@@ -1,0 +1,28 @@
+{
+  "name": "node_js_redis_assignment",
+  "version": "1.0.0",
+  "description": "this is nodejs assignment ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": " nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "krishnajain872"
+  },
+  "author": "krishna jain",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ioredis": "^5.3.2",
+    "redis": "^4.6.13"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "keywords": []
+}
