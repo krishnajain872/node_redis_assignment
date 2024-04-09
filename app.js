@@ -13,14 +13,15 @@ app.use(bodyParser.json());
 // routes.registerRoutes(app);
 
 // health check
-app.get("/health", (req, res) => {
+app.get("/health", (_, res) => {
   res.status(200).send("Redis project backend health check ....");
   console.log("\n\nRedis project backend live\n\n");
 });
 
 //root
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
   res.status(200).send("Redis order and client info api live");
 });
 
 module.exports = app;
+76;

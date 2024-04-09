@@ -1,14 +1,9 @@
-const https = require("https");
 const http = require("http");
 const app = require("./app");
-const fs = require("fs");
 const redisClient = require("./config/db");
+
 require("dotenv").config();
-const {
-  SERVER_PORT: port,
-  SECURE_SERVER_PORT: secure,
-  HOST: host,
-} = process.env;
+const { SERVER_PORT: port, HOST: host } = process.env;
 
 const Server = async function () {
   try {
@@ -19,7 +14,6 @@ const Server = async function () {
     await redisClient.on("error", (err) =>
       console.log("Redis Client Error", err)
     );
-
     console.log("Database connectivity established successfully");
     const serverPort = port || 80;
     const httpServer = http.createServer(app);
