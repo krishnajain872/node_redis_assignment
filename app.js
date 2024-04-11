@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const router = express.Router();
 const app = express();
-// const routes = require("./routes");
+const routes = require("./routes");
 require("dotenv").config();
 
 // routes and bodyparsers
@@ -10,7 +10,7 @@ app.use(router);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// routes.registerRoutes(app);
+routes.registerRoutes(app);
 
 // health check
 app.get("/health", (_, res) => {
@@ -24,4 +24,3 @@ app.get("/", (_, res) => {
 });
 
 module.exports = app;
-76;
