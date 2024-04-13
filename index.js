@@ -17,7 +17,7 @@ const Server = async function () {
     console.log("Database connectivity established successfully");
     const serverPort = port || 80;
     const httpServer = http.createServer(app);
-    httpServer.listen(serverPort, () => {
+    httpServer.listen(serverPort, host, () => {
       console.log(
         ` order/client-:API backend server started @ http://${host}:${serverPort}/ `
       );
