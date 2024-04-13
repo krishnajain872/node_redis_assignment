@@ -11,6 +11,5 @@ router.post(
   orderController.orderInfo,
   genericResponse.responseHelper
 );
-router.get("/info", orderController.getOrder, genericResponse.responseHelper);
 
 module.exports = router;

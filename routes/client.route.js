@@ -5,7 +5,6 @@ const genericResponse = require("../helper/response.helper");
 
 const router = Router();
 
-router.get("/info", clientController.getClient, genericResponse.responseHelper);
 router.post(
   "/info",
   clientValidator.clientInfoschema,

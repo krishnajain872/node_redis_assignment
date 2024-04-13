@@ -11,16 +11,7 @@ const orderInfo = async (req, res, next) => {
     generic.errorHelper(req, res, error.message, error.statusCode, error);
   }
 };
-const getOrder = async (req, res, next) => {
-  try {
-    res.data = { message: "The routes working fine" };
-    next();
-  } catch (error) {
-    generic.errorHelper(req, res, error.message, error.statusCode, error);
-  }
-};
 
 module.exports = {
   orderInfo,
-  getOrder,
 };
